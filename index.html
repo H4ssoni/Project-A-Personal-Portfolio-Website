@@ -18,16 +18,20 @@
     </head>
     <main>
       <section id="about">
+              <button id="theme-toggle">Toggle Dark Mode</button>
         <h1>Hi, Welcome to My Portfolio</h1>
-        <img src="image.jpg" alt="Hassan Mohamed" class="profile-image">
+        <img src="images/image.jpg" alt="Hassan Mohamed" class="profile-image">
         <p> Hello, I'm Hassan Mohamed, a buliding web developer.</p>
       </section>
       <section id="projects">
-        <h2>Projects</h2>
-        <div class="project">
-          <h3>Project 1</h3>
-          <p>A brief description of the project.</p>
-        </div>
+       <div id="project1-modal" class="modal">
+        <div class="modal-content">
+        <span class="close" onclick="closeModal('project1-modal')">&times;</span>
+        <h3>Project 1</h3>
+        <p>Detailed description of the project.</p>
+        <img src="images/project1-screenshot.jpg" alt="Project 1 Screenshot">
+      </div>
+    </div>
         <div class="project">
         <h3>Project 2</h3>
         <p>A second project I worked on.</p>
@@ -39,11 +43,25 @@
       </section>
       <section id="contact">
         <h2>Contact</h2>
-        <p>Email me at: <a href="mailto:xasanmaxamed0717@gmail.com">xasanmaxamed0717@gmail.com</a></p>
+         <form action="https://formsubmit.co/xasanmaxamed0717@gmail.com.com" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button type="submit">Send</button>
+    </form>
       </section>
     </main>
     <footer>
-      <p>© 2024 Hassan Mohamed. All rights reserved.</p>
-    </footer>
+    <p>© 2024 Hassan Mohamed. All rights reserved.</p>
+    <ul class="social-links">
+        <li><a href="https://github.com/yourusername" target="_blank">GitHub</a></li>
+        <li><a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a></li>
+        <li><a href="https://twitter.com/yourusername" target="_blank">Twitter</a></li>
+    </ul>
+  </footer>
+<script src="script.js"></script>
   </body>
 </html>
